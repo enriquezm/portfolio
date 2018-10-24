@@ -1,12 +1,15 @@
-# gatsby-starter-hello-world
-Starter with the bare essentials needed for a [Gatsby](https://www.gatsbyjs.org/) site.
+# Super mES
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
+Short for Super Myles Enriquez System. I know, lame. But Super mES is my personal blog and portfolio.
+
+This portfolio is based of the Gatsby starter over at the [Gatsby](https://www.gatsbyjs.org/) site.
+
+Run Super mES (assuming Gatsby is installed) by running from your CLI:
 ```
-gatsby new gatsby-site https://github.com/gatsbyjs/gatsby-starter-hello-world
+gatsby new enriquezm-portfolio https://github.com/enriquezm/portfolio
 ```
 
-Or [view the live demo here](https://gatsby-starter-hello-world-demo.netlify.com/).
+Or [view the current status here](https://gatsby-starter-hello-world-demo.netlify.com/).
 
 ## Running in development
 `gatsby develop`
