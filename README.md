@@ -9,7 +9,7 @@ Run Super mES (assuming Gatsby is installed) by running from your CLI:
 gatsby new enriquezm-portfolio https://github.com/enriquezm/portfolio
 ```
 
-Or [view the current status here](https://gatsby-starter-hello-world-demo.netlify.com/).
+Or [view the current status here](https://pensive-lamport-06727c.netlify.com/).
 
 ## Running in development
 `gatsby develop`
