@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 const AExternal = styled.a`
-  color: white;
-  margin-right: 10px;
+  color: #375FFF;
+  margin-right: 15px;
   text-decoration: none;
   &:hover {
     color: #40E687;
