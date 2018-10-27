@@ -11,6 +11,6 @@ module.exports = {
           `source sans pro\:300, 700`
         ]
       }
-    }
+    },
   ]
 }
