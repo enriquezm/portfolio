@@ -2,7 +2,7 @@ import React from 'react'
 import Header from '../components/Header'
 
 import MainWrapper from '../layouts/MainWrapper'
-import Hero from '../components/hero'
+import Hero from '../components/Hero'
 
 class Main extends React.Component {
   componentDidMount() {
