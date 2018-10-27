@@ -1,13 +1,19 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Link } from 'gatsby'
+import React from 'react';
+import styled from 'styled-components';
+
+import AInternal from './atoms/AInternal';
+import SocialLinks from './molecules/SocialLinks';
+
 
 const NavBar = styled.header`
-  color: #333;
+  color: white;
+  padding-top: 20px;
+  width: 100%;
 
   display: flex;
   justify-content: space-between;
-  background-color: goldenrod;
+  align-items: center;
+  background-color: #0C0D1B;
 `
 const Logo = styled.div`
   font-size: 2em;
@@ -16,13 +22,18 @@ const Logo = styled.div`
 const Header = () => {
   return (
     <NavBar>
-      <Logo>
-        <Link to="/">Super mES</Link>
-      </Logo>
       <div>
-        <Link to="/about/">About</Link>
+        <Logo>
+          <AInternal to="/">Super meS</AInternal>
+        </Logo>
       </div>
-      <div><a href="https://twitter.com/designthrottle">Twitter</a></div>
+      <div>
+        <AInternal to="/">Home</AInternal>
+        <AInternal to="/about/">About</AInternal>
+      </div>
+      <div>
+        <SocialLinks />
+      </div>
     </NavBar>
   )
 }

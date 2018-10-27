@@ -1,18 +1,19 @@
-import React from "react"
+import React from 'react'
 import Header from '../components/Header'
 
 import MainWrapper from '../layouts/MainWrapper'
+import Hero from '../components/hero'
 
 class Main extends React.Component {
   componentDidMount() {
-    // document.body.style.backgroundColor = '#141516';
+    document.body.style.backgroundColor = '#0C0D1B';
     document.body.style.margin = 0;
   }
   render() {
     return (
       <MainWrapper>
         <Header />
-        <h1>Hello, World!</h1>
+        <Hero />
       </MainWrapper>
     )
   }
