@@ -7,7 +7,6 @@ import B from './atoms/B';
 import SocialLinks from './molecules/SocialLinks';
 
 const HeroWrapper = styled.div`
-  color: white;
   display: flex;
   height: 100vh;
 `
