@@ -4,32 +4,25 @@ import styled from 'styled-components';
 import AInternal from './atoms/AInternal';
 import SocialLinks from './molecules/SocialLinks';
 
-
 const NavBar = styled.header`
-  color: white;
   padding-top: 20px;
   width: 100%;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #0C0D1B;
 `
 const Logo = styled.div`
-  font-size: 2em;
+  font-size: 1em;
 `
 
-const Header = () => {
+export default ({title}) => {
   return (
     <NavBar>
       <div>
         <Logo>
-          <AInternal to="/">Super meS</AInternal>
+          <AInternal to="/">{title}</AInternal>
         </Logo>
-      </div>
-      <div>
-        <AInternal to="/">Home</AInternal>
-        <AInternal to="/about/">About</AInternal>
       </div>
       <div>
         <SocialLinks />
@@ -37,5 +30,3 @@ const Header = () => {
     </NavBar>
   )
 }
-
-export default Header;
