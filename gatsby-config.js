@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Super mES`
+    title: `SUPER mES`
   },
   plugins : [
     `gatsby-plugin-styled-components`,
@@ -8,7 +8,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `source sans pro\:300, 700`
+          `roboto\:300, 900`
         ]
       }
     },
