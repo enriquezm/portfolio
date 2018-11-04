@@ -1,0 +1,8 @@
+:root {
+  --deep-plum: #1B0D29;
+}
+
+body {
+  background-color: var(--deep-plum);
+  color: white;
+}
