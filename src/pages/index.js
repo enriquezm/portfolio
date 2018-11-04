@@ -11,7 +11,7 @@ import '../global-styles.css';
 export default ({ data }) => (
   <Layout>
     <Header title={data.site.siteMetadata.title} />
-    <Hero />
+    <Hero description={data.site.siteMetadata.description} />
   </Layout>
 )
 
@@ -20,6 +20,7 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+        description
       }
     }
   }
