@@ -5,6 +5,8 @@ import { graphql } from 'gatsby';
 
 import Layout from '../components/layout';
 import Hero from '../components/Hero';
+import '../global-styles.css';
+
 
 export default ({ data }) => (
   <Layout>
