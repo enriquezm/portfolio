@@ -20,12 +20,12 @@ const FlexColumn = styled.div`
   }
 `
 
-const Hero = () => {
+const Hero = ({description}) => {
   return (
     <HeroWrapper>
       <FlexColumn>
         <BigHeading>I'm Myles, a <B>UI Engineer</B>.</BigHeading>
-        <P>I'm hijacking the human's visual system.</P>
+        <P>{description}</P>
         <SocialLinks />
       </FlexColumn>
 
