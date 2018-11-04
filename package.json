@@ -16,6 +16,7 @@
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "react-icons": "^3.2.2",
+    "react-pose": "^3.3.7",
     "styled-components": "^4.0.2"
   }
 }
