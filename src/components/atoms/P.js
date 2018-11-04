@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const P = styled.p`
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 300;
 `
 

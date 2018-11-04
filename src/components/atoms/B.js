@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const B = styled.b`
-  color: #40E687; 
+  color: #00cc5d; 
 `
 
 export default B;

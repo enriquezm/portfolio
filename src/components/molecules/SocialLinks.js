@@ -6,9 +6,9 @@ import { FiGithub as GithubIcon, FiTwitter as TwitterIcon, FiCodepen as CodepenI
 const SocialLinks = () => {
   return (
     <div>
-      <AExternal href="https://github.com/enriquezm"><GithubIcon /></AExternal>
-      <AExternal href="https://codepen.io/mylesenri/"><CodepenIcon /></AExternal>
-      <AExternal href="https://twitter.com/designthrottle"><TwitterIcon /></AExternal>
+      <AExternal href="https://github.com/enriquezm"><GithubIcon size={20} /></AExternal>
+      <AExternal href="https://codepen.io/mylesenri/"><CodepenIcon size={20} /></AExternal>
+      <AExternal href="https://twitter.com/designthrottle"><TwitterIcon size={20} /></AExternal>
     </div>
   );
 }

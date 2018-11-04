@@ -4,8 +4,9 @@ import Link from 'gatsby-link';
 const AInternal = styled(Link)`
   margin-right: 1em;
   text-decoration: none;
+  color: white;
   &:hover {
-    color: #40E687;
+    color: #d82186;
   }
 `
 

@@ -6,6 +6,7 @@ import P from './atoms/P';
 import B from './atoms/B';
 import SocialLinks from './molecules/SocialLinks';
 
+
 const HeroWrapper = styled.div`
   display: flex;
   height: 100vh;
@@ -23,13 +24,11 @@ const Hero = () => {
   return (
     <HeroWrapper>
       <FlexColumn>
-        <BigHeading>Hello there! I'm Myles and I'm a <B>Frontend Developer</B>.</BigHeading>
-        <P>Using emotional design and empathy, I want to create human-like interactions between the user and interface.</P>
+        <BigHeading>I'm Myles, a <B>UI Engineer</B>.</BigHeading>
+        <P>I'm hijacking the human's visual system.</P>
         <SocialLinks />
       </FlexColumn>
-      <FlexColumn>
 
-      </FlexColumn>
     </HeroWrapper>
   )
 }
