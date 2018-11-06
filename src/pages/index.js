@@ -5,7 +5,7 @@ import posed from 'react-pose';
 
 import { graphql, Link } from 'gatsby';
 
-import Layout from '../components/Layout';
+import Layout from '../components/layout';
 import Hero from '../components/Hero';
 import '../global-styles.css';
 
