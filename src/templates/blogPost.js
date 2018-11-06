@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Header from '../components/Header';
-import Layout from '../components/Layout';
+import Layout from '../components/layout';
 import styled from 'styled-components';
 import posed from 'react-pose';
 import SplitText from 'react-pose-text';
