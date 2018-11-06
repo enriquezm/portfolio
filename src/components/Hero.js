@@ -1,36 +1,41 @@
 import React from 'react';
 import styled from 'styled-components';
+import { StaticQuery, graphql } from 'gatsby';
+import SplitText from 'react-pose-text';
 
-import BigHeading from './atoms/BigHeading';
-import P from './atoms/P';
 import B from './atoms/B';
-import SocialLinks from './molecules/SocialLinks';
 
-
-const HeroWrapper = styled.div`
-  display: flex;
-  height: 100vh;
-`
-const FlexColumn = styled.div`
-  width: 50%;
-
-  @media (max-width: 768px) {
-    width: 100vw;
-    border: 1px solid red;
+const charPoses = {
+  exit: {
+    opacity: 0
+  },
+  enter: {
+    opacity: 1,
+    delay: ({charIndex}) => charIndex * 5
   }
-`
-
-const Hero = ({description}) => {
-  return (
-    <HeroWrapper>
-      <FlexColumn>
-        <BigHeading>I'm Myles, a <B>UI Engineer</B>.</BigHeading>
-        <P>{description}</P>
-        <SocialLinks />
-      </FlexColumn>
-
-    </HeroWrapper>
-  )
 }
 
-export default Hero
+const HeroWrapper = styled.div`
+  width: 100%;
+  margin-bottom: 25px;
+`
+
+export default () => (
+  <StaticQuery
+    query={graphql`
+      query HeroDescriptionQuery {
+        site {
+          siteMetadata {
+            description
+          }
+        }
+      }
+    `}
+    render={data => (
+      <HeroWrapper initialPose="exit" pose="enter">
+          <h2>I'm Myles, a <B>UI Engineer</B>.</h2>
+          <p>{data.site.siteMetadata.description}</p>
+      </HeroWrapper>
+    )}
+  />
+)

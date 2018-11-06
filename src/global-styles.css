@@ -6,3 +6,7 @@ body {
   background-color: var(--deep-plum);
   color: white;
 }
+p {
+  font-size: 16px;
+  font-weigth: 300;
+}
