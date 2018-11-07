@@ -2,10 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 const LayoutWrapper = styled.div`
-  font-family: 'Source Sans Pro', sans-serif;
+  height: 100vh;
   font-size: 16px;
   box-sizing: border-box;
   padding: 0 10%;
+  background-color: #190C1D;
+
+  display: flex;
+  align-items: center;
 `
 
 

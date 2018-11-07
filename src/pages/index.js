@@ -1,11 +1,10 @@
 import React from 'react';
-import Header from '../components/Header';
 import styled from 'styled-components';
 import posed from 'react-pose';
 
 import { graphql, Link } from 'gatsby';
 
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 import Hero from '../components/Hero';
 import '../global-styles.css';
 
@@ -38,8 +37,7 @@ const PostItemMotion = posed.li({
 const PostItem = styled(PostItemMotion)`
   padding: 10px;
   margin-bottom: 10px;
-  border-radius: 3px;
-  background: #39004c;
+  background: #28122e;
   &:hover {
     background: #00cc5d;
   }
@@ -50,22 +48,23 @@ export default ({ data }) => {
   const { edges } = data.allMarkdownRemark;
   return (
     <Layout>
-      <Header/>
-      <Hero />
-      <PostsList>
-      {
-        edges.map(edge => {
-          const {frontmatter} = edge.node;
-          return (
-            <Link to={frontmatter.path}>
-              <PostItem key={frontmatter.path}>
-                {frontmatter.title}
-              </PostItem>
-            </Link>
-          )
-        })
-      }
-      </PostsList>
+      <div>
+        <Hero />
+        <PostsList>
+        {
+          edges.map(edge => {
+            const {frontmatter} = edge.node;
+            return (
+              <Link to={frontmatter.path}>
+                <PostItem key={frontmatter.path}>
+                  {frontmatter.title}
+                </PostItem>
+              </Link>
+            )
+          })
+        }
+        </PostsList>
+      </div>
     </Layout>
   )
 }
