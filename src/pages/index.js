@@ -1,73 +1,55 @@
 import React from 'react';
 import styled from 'styled-components';
-import posed from 'react-pose';
-
-import { graphql, Link } from 'gatsby';
-
 import Layout from '../components/Layout';
-import Hero from '../components/Hero';
+import { graphql, Link } from 'gatsby';
 import '../global-styles.css';
 
-const PostsList = styled.ul`
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  a {
-    text-decoration: none;
-    color: #d82186;
-    &:hover {
-      color: white;
-    }
-  }
-`
-const PostItemMotion = posed.li({
-  hoverable: true,
-  pressable: true,
-  init: {
-    scale: 1
-  },
-  hover: {
-    scale: 1.05
-  },
-  press: {
-    scale: 0.9
-  }
-})
-
-const PostItem = styled(PostItemMotion)`
-  padding: 10px;
-  margin-bottom: 10px;
-  background: #28122e;
+const ListItem = styled.div`
+  margin: 20px 0;
+  transition: all 0.5s;
   &:hover {
-    background: #00cc5d;
+    transition: all 0.5s;
+    background:#FCFCFC;
+  }
+  & > a > h2 {
+    margin: 0;
+  }
+  & > p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    margin: 5px 0;
   }
 `
 
 
-export default ({ data }) => {
+const Index = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
   return (
     <Layout>
-      <div>
-        <Hero />
-        <PostsList>
-        {
-          edges.map(edge => {
-            const {frontmatter} = edge.node;
-            return (
-              <Link to={frontmatter.path}>
-                <PostItem key={frontmatter.path}>
-                  {frontmatter.title}
-                </PostItem>
-              </Link>
-            )
-          })
-        }
-        </PostsList>
-      </div>
+      <main>
+        <ul>
+          {
+            edges.map(edge => {
+              const {frontmatter} = edge.node;
+              return (
+                <li key={frontmatter.path}>
+                  <ListItem>
+                    <Link to={frontmatter.path}>
+                      <h2>{frontmatter.title}</h2>
+                    </Link>
+                    <p>{frontmatter.date}</p>
+                  </ListItem>
+                </li>
+              )
+            })
+          }
+        </ul>
+      </main>
     </Layout>
   )
 }
+
+export default Index;
 
 export const query = graphql`
   query {

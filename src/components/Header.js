@@ -1,46 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { StaticQuery, graphql } from 'gatsby';
-
-import AInternal from './atoms/AInternal';
-import SocialLinks from './molecules/SocialLinks';
-
-const NavBar = styled.header`
-  padding-top: 20px;
-  width: 100%;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+const Wrapper = styled.div`
+  margin: 50px 0;
 `
-const Logo = styled.div`
-  font-size: 1em;
+const H1 = styled.h1`
+  margin: 0;
+`
+const P = styled.p`
+  margin-top: 10px;
 `
 
-export default () => (
+const Header = () => {
+  return (
+    <Wrapper>
+      <H1>Myles Enriquez</H1>
+      <P>UI Engineer</P>
+    </Wrapper>
+  )
+}
 
-  <StaticQuery
-    query={graphql`
-      query HeadingQuery {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `}
-    render={data => (
-      <NavBar>
-        <div>
-          <Logo>
-            <AInternal to="/">{data.site.siteMetadata.title}</AInternal>
-          </Logo>
-        </div>
-        <div>
-          <SocialLinks />
-        </div>
-      </NavBar>
-    )}
-  />
-)
+export default Header;
