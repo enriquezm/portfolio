@@ -28,5 +28,4 @@ const Layout = ({children}) => {
   )
 }
 
-{/*remove this comment later*/}
 export default Layout;
