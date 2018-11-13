@@ -3,6 +3,13 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 
-const About = () => <h1>About Page</h1>
+const About = () => {
+  return (
+    <Layout>
+      <p>Man I hate writing about myself...</p>
+    </Layout>
+  )
+
+}
 
 export default About;
