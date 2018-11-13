@@ -11,7 +11,7 @@ Run this project (assuming Gatsby is installed) by running from your CLI:
 gatsby new enriquezm-portfolio https://github.com/enriquezm/portfolio
 ```
 
-Or [view the current status here](https://pensive-lamport-06727c.netlify.com/).
+Or [view the current status here](https://focused-brattain-9bb11b.netlify.com/).
 
 ## Running in development
 `gatsby develop`
