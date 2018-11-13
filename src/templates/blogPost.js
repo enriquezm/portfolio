@@ -3,6 +3,7 @@ import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
 import styled from 'styled-components';
 import posed from 'react-pose';
+import '../global-styles.css';
 
 const PostContainerMotion = posed.div({
   exit: {
