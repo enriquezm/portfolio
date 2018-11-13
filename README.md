@@ -1,10 +1,12 @@
-# Super mES
+![](https://img.shields.io/badge/Generator-Gatsbyjs-brightgreen.svg?logo=appveyor&longCache=true&style=flat-square)
 
-Short for Super Myles Enriquez System. I know, lame. But Super mES is my personal blog and portfolio.
+# Portfolio
+
+My personal developer log.
 
 This portfolio is based of the Gatsby starter over at the [Gatsby](https://www.gatsbyjs.org/) site.
 
-Run Super mES (assuming Gatsby is installed) by running from your CLI:
+Run this project (assuming Gatsby is installed) by running from your CLI:
 ```
 gatsby new enriquezm-portfolio https://github.com/enriquezm/portfolio
 ```
