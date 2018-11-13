@@ -9,15 +9,15 @@ No matter how good at working with git you think you are, there will be times th
 
 This list will be growing as I run into obstacles.
 
-# 1. Updating a filename
+### 1. Updating a filename
 
 Ah yes, you update a filename but git just ignores you.
 
-## TLDR;
+#### TLDR;
 
     git mv oldName newName
 
-## Have some time? Here are the details.
+#### Have some time? Here are the details.
 
 Two things:
 
@@ -36,7 +36,7 @@ You could do the same thing with these 3 commands:
 
 But no one has time for that.
 
-## My scenario
+#### My scenario
 
 I came across this when I needed to update a component file name (React) form a lowercase to uppercase name.
 
@@ -44,11 +44,11 @@ Essentially, what `git mv oldName newName` does is update your index. I don't ne
 
 Here's some more reading if you want to [learn more about renaming files](https://git-scm.com/docs/git-mv).
 
-# 2. Undo changes (before adding to index)
+### 2. Undo changes (before adding to index)
 
 You've made some updates and realized that you don't want to go through with them anymore. What do you do?
 
-## TLDR;
+#### TLDR;
 
 Before adding your changes to index (`git add <stuff>`)
 
@@ -56,11 +56,11 @@ Use `git stash`
 
 Git `git drop`
 
-## Have some time? Here are more details.
+#### Have some time? Here are more details.
 
 I'm not going to go into too much detail, because you can do a lot with this command, but just know that it works like a charm when you made some modifications that you want to put to the side and potentially go back to them later or disregard them all together.
 
-## My scenario
+#### My scenario
 
 I'm constantly doing this. Making some changes to some file and then realizing I want to undo those changes and go back to a previous state.
 
