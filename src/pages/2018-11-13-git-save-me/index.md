@@ -5,8 +5,6 @@ title: "Git save me"
 tags: ['pilot']
 excerpt: "Git commands that save me."
 ---
-# Git save me
-
 No matter how good at working with git you think you are, there will be times that you just make a simple mistake. Here are some commands that help me get out of some deep shit.
 
 This list will be growing as I run into obstacles.
