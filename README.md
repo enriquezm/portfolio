@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/Generator-Gatsbyjs-brightgreen.svg?logo=appveyor&longCache=true&style=flat-square)
+![](https://img.shields.io/badge/Gatsby-v2-brightgreen.svg?logo=appveyor&longCache=true&style=flat-square)
 ![](https://img.shields.io/npm/v/npm.svg?logo=appveyor&longCache=true&style=flat-square)
 
 # Portfolio
