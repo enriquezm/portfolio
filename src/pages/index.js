@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import Layout from '../components/Layout';
 import { graphql, Link } from 'gatsby';
-import '../global-styles.css';
 
 const ListItem = styled.div`
   margin: 20px 0;

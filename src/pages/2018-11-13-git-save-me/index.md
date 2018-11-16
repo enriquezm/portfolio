@@ -68,12 +68,12 @@ Before taking another step forward, like adding changes to the index with `git a
 
 Git will then print out a notification along the lines of:
 
-    `Saved working directory and index state WIP on master: 1df65f3 Rename.`
+    Saved working directory and index state WIP on master: 1df65f3 Rename.
 
 Essentially, git is saying that it put you back to a state before you made changes, and also stashed those changes you made in case you want to go back to them or not.
 
 Now that you've stashed those changes you didn't want, you can drop them (aka delete them). And you do this with the following command:
 
-    `git stash drop`
+    git stash drop
 
 Here's some more reading if you want to [learn more about stashing](https://git-scm.com/docs/git-stash).
