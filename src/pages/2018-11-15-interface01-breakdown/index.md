@@ -5,8 +5,6 @@ title: "Interface 001 - Breakdown"
 tags: ['react']
 excerpt: "Let's breakdown interface 001."
 ---
-# Interface 01 - Breakdown
-
 This interface design is created by [M S Brar](https://dribbble.com/msbrar) on Dribbble. Just to be extra clear, I did not and am not taking credit for this design. I'm simply using it for my own personal education reasons. If you like or want to know more about the design, please contact the original designer, MS Brar.
 
 Here's my mission:
@@ -38,7 +36,7 @@ I don't necessarily have a built in process when it comes to designing or develo
 
 I mentioned above that there I could see at first glance a header and 6 items. I can rephrase that and instead say I see a header and a main content area. Because I'm more of a visual person, here's what I mean drawn out.
 
-![](interface01-2-eeb94771-8c99-49aa-93a4-656f6bcb0517.png)
+![](/interface01-2-eeb94771-8c99-49aa-93a4-656f6bcb0517.png)
 
 Now, because I'm working in react I want to use one of reasons react is known for and thats: Component Reusability. The header section I have labeled above is pretty self-explanatory so a renaming is not needed. The main section, however, should be renamed to something that makes more sense. And this is because we might need to reuse it later on in our application. I believe it's best to get used to doing this no matter the size of your app.
 
