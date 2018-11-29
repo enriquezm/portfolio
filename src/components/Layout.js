@@ -5,14 +5,15 @@ import Footer from './Footer';
 import '../global-styles.css';
 
 const LayoutWrapper = styled.article`
+  height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 `
 const Container = styled.div`
-  min-width: 320px;
+  max-width: 600px;
   padding: 10px;
-  width: 600px;
 `
 
 
@@ -21,9 +22,7 @@ const Layout = (props) => {
   return (
     <LayoutWrapper>
       <Container>
-        <Header />
         {props.children}
-        <Footer />
       </Container>
     </LayoutWrapper>
   )
