@@ -23,7 +23,7 @@ const Header = () => {
     <Wrapper>
     <div>
       <H1>Myles Enriquez</H1>
-      <P>UI Engineer</P>
+      <P>I make user interfaces.</P>
       <Links>
         <a href="https://github.com/enriquezm">
           <Github size={20} />
