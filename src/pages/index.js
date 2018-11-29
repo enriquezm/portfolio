@@ -1,6 +1,8 @@
 import React from 'react';
 import Layout from '../components/Layout';
+import Anime from 'react-anime';
 import styled from 'styled-components';
+import { FiGithub as Github, FiUser as Linkedin, FiCamera as Camera } from "react-icons/fi";
 
 const H1 = styled.h1`
   margin-bottom: 10px;
@@ -64,15 +66,20 @@ const StatusContainer = styled.div`
 const IndexPage = () => {
   return (
     <Layout>
-     <H1>Myles Enriquez</H1>
-     <P>I design and build user interfaces.</P>
-     <ButtonContainer>
-       <Button className="primary" href="https://github.com/enriquezm">Github</Button>
-       <Button className="secondary" href="https://www.linkedin.com/in/mylesenriquez/">LinkedIn</Button>
-     </ButtonContainer>
-     <StatusContainer>
-      <p><b>Status:</b> Brewing some coffee.</p>
-     </StatusContainer>
+      <Anime
+        delay={(e, i) => i * 100}
+        scale={[0, .9]}
+      >
+       <H1>Myles Enriquez</H1>
+       <P>I design and build user interfaces.</P>
+       <ButtonContainer>
+         <Button className="primary" href="https://github.com/enriquezm"><Github /> Github</Button>
+         <Button className="secondary" href="https://www.linkedin.com/in/mylesenriquez/"><Linkedin /> LinkedIn</Button>
+       </ButtonContainer>
+       <StatusContainer>
+        <p><b>Current Status:</b> Taking <Camera /> of my cat.</p>
+       </StatusContainer>
+      </Anime>
     </Layout>
   );
 }

@@ -1,7 +1,5 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import styled from 'styled-components'
-import Layout from '../components/Layout'
+import React from 'react';
+import Layout from '../components/Layout';
 
 const About = () => {
   return (
@@ -14,6 +12,6 @@ const About = () => {
     </Layout>
   )
 
-}
+};
 
 export default About;
