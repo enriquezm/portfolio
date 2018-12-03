@@ -2,8 +2,13 @@ import React from 'react';
 import Layout from '../components/Layout';
 import Anime from 'react-anime';
 import styled from 'styled-components';
+<<<<<<< HEAD
 import { FiGithub as Github, FiUser as Linkedin, FiCamera as Camera } from "react-icons/fi";
 import { graphql, Link } from 'gatsby';
+=======
+import Status from '../components/Status';
+import { FiGithub as Github, FiUser as Linkedin } from "react-icons/fi";
+>>>>>>> 0f4b2818b16d498b037b8b0185e5643f873bf698
 
 const H1 = styled.h1`
   margin-bottom: 10px;
@@ -55,6 +60,7 @@ const Button = styled.a`
   }
 `;
 
+<<<<<<< HEAD
 const StatusContainer = styled.div`
   /* border: 1px solid orange; */
   p {
@@ -66,6 +72,10 @@ const StatusContainer = styled.div`
 `;
 const IndexPage = ({data}) => {
   const { edges } = data.allMarkdownRemark;
+=======
+
+const IndexPage = () => {
+>>>>>>> 0f4b2818b16d498b037b8b0185e5643f873bf698
   return (
     <Layout>
       <Anime
@@ -73,11 +83,12 @@ const IndexPage = ({data}) => {
         scale={[0, .9]}
       >
        <H1>Myles Enriquez</H1>
-       <P>I design and build user interfaces.</P>
+       <P>I design/build interfaces and wire them to data.</P>
        <ButtonContainer>
          <Button className="primary" href="https://github.com/enriquezm"><Github /> Github</Button>
          <Button className="secondary" href="https://www.linkedin.com/in/mylesenriquez/"><Linkedin /> LinkedIn</Button>
        </ButtonContainer>
+<<<<<<< HEAD
        <StatusContainer>
         <p><b>Current Status:</b> Taking <Camera /> of my cat.</p>
        </StatusContainer>
@@ -100,6 +111,9 @@ const IndexPage = ({data}) => {
            }
          </ul>
        </div>
+=======
+       <Status />
+>>>>>>> 0f4b2818b16d498b037b8b0185e5643f873bf698
       </Anime>
     </Layout>
   );
