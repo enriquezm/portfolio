@@ -3,6 +3,7 @@ import Layout from '../components/Layout';
 import Anime from 'react-anime';
 import styled from 'styled-components';
 import { FiGithub as Github, FiUser as Linkedin, FiCamera as Camera } from "react-icons/fi";
+import { graphql, Link } from 'gatsby';
 
 const H1 = styled.h1`
   margin-bottom: 10px;
@@ -43,9 +44,9 @@ const Button = styled.a`
   }
   &.secondary {
     &:hover {
-      color: #5772FF;
-      box-shadow: 10px 10px #5772FF;
-      border: 1px solid #5772FF;
+      color: #8E26FF;
+      box-shadow: 10px 10px #8E26FF;
+      border: 1px solid #8E26FF;
       transition: all 0.3s;
     }
     &:active {
@@ -63,7 +64,8 @@ const StatusContainer = styled.div`
     }
   }
 `;
-const IndexPage = () => {
+const IndexPage = ({data}) => {
+  const { edges } = data.allMarkdownRemark;
   return (
     <Layout>
       <Anime
@@ -79,9 +81,46 @@ const IndexPage = () => {
        <StatusContainer>
         <p><b>Current Status:</b> Taking <Camera /> of my cat.</p>
        </StatusContainer>
+       <div>
+         <ul>
+           {
+             edges.map(edge => {
+               const {frontmatter} = edge.node;
+               return (
+                 <li key={frontmatter.path}>
+                   <div>
+                     <Link to={frontmatter.path}>
+                       <h2>{frontmatter.title}</h2>
+                     </Link>
+                     <p>{frontmatter.date}</p>
+                   </div>
+                 </li>
+               )
+             })
+           }
+         </ul>
+       </div>
       </Anime>
     </Layout>
   );
 }
 
 export default IndexPage;
+
+export const query = graphql`
+  query {
+    allMarkdownRemark (
+      sort: {order: DESC, fields: [frontmatter___date]}
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            path
+            date
+          }
+        }
+      }
+    }
+  }
+`;

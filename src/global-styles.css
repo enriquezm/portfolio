@@ -1,7 +1,3 @@
-:root {
-  --deep-plum: #190C1D;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -9,7 +5,7 @@
 body {
   margin: 0;
   background: #131212;
-  color: #ECECEC;
+  color: #F9F9F9;
   font-family: 'Roboto', sans-serif;
 }
 

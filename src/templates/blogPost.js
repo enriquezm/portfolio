@@ -2,27 +2,11 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
 import styled from 'styled-components';
-import posed from 'react-pose';
 import '../global-styles.css';
+import Header from '../components/Header';
 
-const PostContainerMotion = posed.div({
-  exit: {
-    y: 100,
-    opacity: 0
-  },
-  enter: {
-    y: 0,
-    opacity: 1,
-    delay: 100,
-    transition : {
-      duration: 500
-    },
-    beforeChildren: true,
-    staggerChildren: 5000
-  }
-})
 
-const PostContainer = styled(PostContainerMotion)`
+const PostContainer = styled.div`
   line-height: 1.5;
   pre {
     padding: 10px;
@@ -39,8 +23,8 @@ const Template = ({data}) => {
   const html = markdownRemark.html;
   return (
     <Layout>
-      <Link to="/">Back</Link>
-      <PostContainer initialPose="exit" pose="enter">
+      <Header />
+      <PostContainer>
         <h2>{title}</h2>
         <div dangerouslySetInnerHTML={{__html: html}} />
       </PostContainer>
