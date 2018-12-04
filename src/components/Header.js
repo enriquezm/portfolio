@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { FiGithub as Github, FiCodepen as Codepen, FiUser as Linkedin } from "react-icons/fi";
+import { FiGithub as Github, FiUser as Linkedin } from "react-icons/fi";
 
 const Wrapper = styled.div`
   margin: 50px 0;
