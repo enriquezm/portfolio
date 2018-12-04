@@ -1,7 +1,28 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
+const fadeInOut = keyframes`
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
+const FadeInOut = styled.b`
+  animation: ${fadeInOut} 1s ease-in infinite alternate;
+`;
 const StatusContainer = styled.div`
+  margin-bottom: 50px;
   p {
     font-size: 0.8em;
     b {
@@ -28,7 +49,7 @@ class Status extends React.Component {
 
         return (
             <StatusContainer>
-                <p><b>Status:</b> { this.state.status[statusNum] }</p>
+                <p><FadeInOut>Status:</FadeInOut> { this.state.status[statusNum] }</p>
             </StatusContainer>
         );
     }
