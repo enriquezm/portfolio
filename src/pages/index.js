@@ -2,20 +2,16 @@ import React from 'react';
 import Layout from '../components/Layout';
 import Anime from 'react-anime';
 import styled from 'styled-components';
-<<<<<<< HEAD
-import { FiGithub as Github, FiUser as Linkedin, FiCamera as Camera } from "react-icons/fi";
 import { graphql, Link } from 'gatsby';
-=======
 import Status from '../components/Status';
 import { FiGithub as Github, FiUser as Linkedin } from "react-icons/fi";
->>>>>>> 0f4b2818b16d498b037b8b0185e5643f873bf698
 
 const H1 = styled.h1`
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 `;
 
 const P = styled.p`
-  margin: 0 0 10px 0;
+  margin: 0 0 20px 0;
 `;
 
 const ButtonContainer = styled.div`
@@ -60,61 +56,54 @@ const Button = styled.a`
   }
 `;
 
-<<<<<<< HEAD
-const StatusContainer = styled.div`
-  /* border: 1px solid orange; */
-  p {
-    font-size: 0.8em;
-    b {
-      color: #2aff82;
+const PostList = styled.div`
+
+`;
+const Post = styled.li`
+  a {
+    color: #FF255B;
+    transition: all 0.3s;
+    &:hover {
+      color: #ff668c;
+      transition: all 0.3s;
     }
   }
 `;
+
 const IndexPage = ({data}) => {
   const { edges } = data.allMarkdownRemark;
-=======
-
-const IndexPage = () => {
->>>>>>> 0f4b2818b16d498b037b8b0185e5643f873bf698
   return (
     <Layout>
-      <Anime
-        delay={(e, i) => i * 100}
-        scale={[0, .9]}
-      >
+      <Anime delay={(e, i) => i * 300} opacity={[0, 1]} translateY={'1em'}>
        <H1>Myles Enriquez</H1>
-       <P>I design/build interfaces and wire them to data.</P>
+       <P>I design/build interfaces and connect them to data.</P>
        <ButtonContainer>
          <Button className="primary" href="https://github.com/enriquezm"><Github /> Github</Button>
          <Button className="secondary" href="https://www.linkedin.com/in/mylesenriquez/"><Linkedin /> LinkedIn</Button>
        </ButtonContainer>
-<<<<<<< HEAD
-       <StatusContainer>
-        <p><b>Current Status:</b> Taking <Camera /> of my cat.</p>
-       </StatusContainer>
-       <div>
-         <ul>
-           {
-             edges.map(edge => {
-               const {frontmatter} = edge.node;
-               return (
-                 <li key={frontmatter.path}>
-                   <div>
-                     <Link to={frontmatter.path}>
-                       <h2>{frontmatter.title}</h2>
-                     </Link>
-                     <p>{frontmatter.date}</p>
-                   </div>
-                 </li>
-               )
-             })
-           }
-         </ul>
-       </div>
-=======
        <Status />
->>>>>>> 0f4b2818b16d498b037b8b0185e5643f873bf698
       </Anime>
+        <PostList>
+        <Anime delay={(e, i) => i * 300} opacity={[0, 1]}>
+          <ul>
+            {
+              edges.map(edge => {
+                const {frontmatter} = edge.node;
+                return (
+                  <Post key={frontmatter.path}>
+                    <div>
+                      <Link to={frontmatter.path}>
+                        <h2>{frontmatter.title}</h2>
+                      </Link>
+                      <p>{frontmatter.date}</p>
+                    </div>
+                  </Post>
+                )
+              })
+            }
+          </ul>
+          </Anime>
+        </PostList>
     </Layout>
   );
 }
