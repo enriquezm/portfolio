@@ -40,13 +40,10 @@ ul {
 }
 
 a {
-  color: #5772FF;
+  color: #FF255B;
 }
-a:hover {
-  color: #2447FF;
-}
-a:active {
-  color: #9013FE;
+a:hover, a:active {
+  color: #ff668c;
 }
 code {
   color: #FB4F58;
