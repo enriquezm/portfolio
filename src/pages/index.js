@@ -19,26 +19,30 @@ const LinkContainer = styled.div`
 
   a {
     margin: 10px 20px 30px 0;
+    padding: 10px 15px;
     transition: all 0.5s;
     text-decoration: none;
-    color: #fff;
+    color: #131212;
+    border: 1px solid #131212;
+    border-radius: 4px;
 
     &.primary {
+      border: 1px solid #8E26FF;
+      color: #8E26FF;
       &:hover {
-        color: #2aff82;
+        color: white;
+        background: #8E26FF;
+        border: 1px solid #8E26FF;
         transition: all 0.3s;
-      }
-      &:active {
-        box-shadow: 4px 4px #2aff82;
       }
     }
     &.secondary {
+      color: #FF255B;
+      border: 1px solid #FF255B;
       &:hover {
-        color: #8E26FF;
+        color: white;
+        background-color: #FF255B;
         transition: all 0.3s;
-      }
-      &:active {
-        box-shadow: 4px 4px #5772ff;
       }
     }
   }

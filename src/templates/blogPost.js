@@ -23,7 +23,6 @@ const Template = ({data}) => {
   const html = markdownRemark.html;
   return (
     <Layout>
-      <Header />
       <PostContainer>
         <h2>{title}</h2>
         <div dangerouslySetInnerHTML={{__html: html}} />

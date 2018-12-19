@@ -26,7 +26,7 @@ const StatusContainer = styled.div`
   p {
     font-size: 0.8em;
     b {
-      color: #2aff82;
+      color: #FF255B;
     }
   }
 `;
