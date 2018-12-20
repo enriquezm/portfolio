@@ -3,7 +3,6 @@ import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import styled from 'styled-components';
 import '../global-styles.css';
-import Header from '../components/Header';
 
 
 const PostContainer = styled.div`
@@ -14,6 +13,9 @@ const PostContainer = styled.div`
     background-color: #F2F2F4;
     color: #4A4A4A;
     font-size: 14px;
+  }
+  strong {
+    color: #7F00FF;
   }
 `
 
