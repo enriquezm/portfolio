@@ -7,13 +7,13 @@ excerpt: "Let's breakdown interface 001."
 ---
 This interface design is created by [M S Brar](https://dribbble.com/msbrar) on Dribbble. Just to be extra clear, I did not and am not taking credit for this design. I'm simply using it for my own personal education reasons. If you like or want to know more about the design, please contact the original designer, MS Brar.
 
-Here's my mission:
+Here's the plan for this project series:
 
 1. **Breakdown the design into visual components. (Where you currently are)**
-2. Build the components with react. (using codesandbox)
-3. Add animations with react-pose or react-anime (not sure yet)
+2. Build the components with react. 
+3. Add animations with react-pose or react-anime 
 
-# The Breakdown
+### The Breakdown
 
 Here's the screen I'll be developing:
 
@@ -32,7 +32,7 @@ For color matching, my go to is: [color picker eyedropper](https://chrome.google
 
 I don't necessarily have a built in process when it comes to designing or developing, but I do like to start as basic and as simple as I can. So I'll start building this interface by figuring out the basic layout.
 
-## Layout Components
+### Layout Components
 
 I mentioned above that there I could see at first glance a header and 6 items. I can rephrase that and instead say I see a header and a main content area. Because I'm more of a visual person, here's what I mean drawn out.
 
@@ -46,7 +46,7 @@ I'm going to rename this section as ItemGrid, like so:
 
 Okay, now we have our basic section components for our layout. Let's move on. We'll first break down the `Header` component and then we'll move onto breaking down `ItemGrid`.
 
-## Smaller Components
+### Smaller Components
 
 **Header**
 
