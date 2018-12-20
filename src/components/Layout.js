@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Header from './Header';
+import Footer from './Footer';
 import '../global-styles.css';
 
 const LayoutWrapper = styled.article`
@@ -22,6 +23,7 @@ const Layout = (props) => {
       <Container>
         <Header />
         {props.children}
+        <Footer />
       </Container>
     </LayoutWrapper>
   )
