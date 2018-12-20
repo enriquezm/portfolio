@@ -24,7 +24,7 @@ const FadeInOut = styled.b`
 const StatusContainer = styled.div`
   margin-bottom: 50px;
   p {
-    font-size: 0.8em;
+    font-size: 16px;
     b {
       color: #FF255B;
     }
