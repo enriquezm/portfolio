@@ -34,7 +34,7 @@ const BlogPage = ({ data }) => {
                 <li key={frontmatter.path}>
                   <ListItem>
                     <Link to={frontmatter.path}>
-                      <h2>{frontmatter.title}</h2>
+                      <p>{frontmatter.title}</p>
                     </Link>
                     <p>{frontmatter.date}</p>
                   </ListItem>
