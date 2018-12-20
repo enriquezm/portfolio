@@ -2,7 +2,7 @@ import React from 'react';
 import LandingLayout from '../components/LandingLayout';
 import Anime from 'react-anime';
 import styled from 'styled-components';
-import { graphql, Link } from 'gatsby';
+import { Link } from 'gatsby';
 import Status from '../components/Status';
 import { FiGithub as Github, FiFileText as File, FiLinkedin as LinkedIn } from "react-icons/fi";
 
