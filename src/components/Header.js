@@ -10,6 +10,7 @@ const H1 = styled.h1`
 
 const P = styled.p`
   margin: 0 0 20px 0;
+  color: #65636f;
 `;
 
 const LinkContainer = styled.div`
