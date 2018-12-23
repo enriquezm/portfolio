@@ -5,27 +5,41 @@ import { graphql, Link } from 'gatsby';
 
 const PostsContainer = styled.main`
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    a {
+        width: 48%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 3px solid #131212;
+        transition: all 0.3s;
+        &:hover {
+            border: 3px solid #8E26FF;
+            transition: all 0.3s;
+        }
+        h2 {
+            font-size: 18px;
+        }
+    }
 `;
 
 const BlogPage2 = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
   return (
     <Layout>
-      <main>
+      <PostsContainer>
           {
             edges.map(edge => {
               const {frontmatter} = edge.node;
               return (
-                <div key={frontmatter.path}>
-                    <Link to={frontmatter.path}>
-                        <h2>{frontmatter.title}</h2>
-                    </Link>
+                <Link to={frontmatter.path} key={frontmatter.path}>
+                    <h2>{frontmatter.title}</h2>
                     <p>{frontmatter.date}</p>
-                </div>
+                </Link>
               )
             })
           }
-      </main>
+      </PostsContainer>
     </Layout>
   )
 }
