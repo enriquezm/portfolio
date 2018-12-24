@@ -8,17 +8,23 @@ const PostsContainer = styled.main`
     justify-content: space-between;
     flex-wrap: wrap;
     a {
-        width: 48%;
+        width: 33%;
         padding: 10px;
         margin-bottom: 15px;
         border: 3px solid #131212;
+        text-decoration: none;
         transition: all 0.3s;
         &:hover {
+            color: red;
             border: 3px solid #8E26FF;
             transition: all 0.3s;
         }
         h2 {
             font-size: 18px;
+            color: #131212;
+        }
+        p {
+            color: #65636f;
         }
     }
 `;
@@ -31,10 +37,12 @@ const BlogPage2 = ({ data }) => {
           {
             edges.map(edge => {
               const {frontmatter} = edge.node;
+              
               return (
                 <Link to={frontmatter.path} key={frontmatter.path}>
                     <h2>{frontmatter.title}</h2>
-                    <p>{frontmatter.date}</p>
+                    <p>{frontmatter.excerpt}</p>
+                    
                 </Link>
               )
             })
@@ -57,6 +65,8 @@ export const query = graphql`
             title
             path
             date
+            excerpt
+            tags
           }
         }
       }
