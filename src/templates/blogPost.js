@@ -7,6 +7,9 @@ import '../global-styles.css';
 
 const PostContainer = styled.div`
   line-height: 1.5;
+  h2 {
+    margin-bottom: 5px;
+  }
   pre {
     padding: 10px;
     border-radius: 3px;
@@ -18,6 +21,21 @@ const PostContainer = styled.div`
     color: #7F00FF;
   }
 `
+const Meta = styled.div`
+  display: flex;
+  margin-bottom: 20px;
+`;
+const Tags = styled.div`
+  display: flex;
+  div {
+    margin: 0 2.5px 0 2.5px;
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-size: 12px;
+    background: #8E26FF;
+    color: white;
+  }
+`;
 const LinkContainer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -35,6 +53,14 @@ const Template = ({data, pageContext}) => {
     <Layout>
       <PostContainer>
         <h2>{title}</h2>
+        <Meta>
+          <Tags>
+            Involves:
+            <div>React</div>
+            <div>MySQL</div>
+            <div>Nodejs</div>
+          </Tags>
+        </Meta>
         <div dangerouslySetInnerHTML={{__html: html}} />
       </PostContainer>
       <hr />
@@ -56,7 +82,9 @@ const Template = ({data, pageContext}) => {
 
 export const query = graphql`
   query($pathSlug: String!) {
-    markdownRemark(frontmatter: { path: {eq: $pathSlug} }) {
+    markdownRemark(frontmatter: {
+      path: {eq: $pathSlug
+    } }) {
       html
       frontmatter {
         title
