@@ -1,5 +1,5 @@
 ---
-path: "/blog/habit-rabbit-app"
+path: "/habit-rabbit-app"
 date: "2019-01-09"
 title: "Habit Rabbit App"
 tags: ['project']
