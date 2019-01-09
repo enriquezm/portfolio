@@ -13,6 +13,7 @@ const HeartIcon = styled(Heart)`
 const Footer = () => {
   return (
     <Wrapper>
+      <hr />
       <p>Created by Myles with <a href="https://www.gatsbyjs.org/">Gatsby</a> and <HeartIcon />.</p>
     </Wrapper>
   )

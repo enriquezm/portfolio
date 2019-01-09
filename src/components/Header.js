@@ -47,7 +47,9 @@ const Header = () => {
           <a className="secondary" href="https://github.com/enriquezm"><Github size={20} /></a>
           <a className="secondary" href="https://www.linkedin.com/in/mylesenriquez/"><LinkedIn size={20} /></a>
         </LinkContainer>
+        <hr />
       </div>
+      
   )
 }
 
