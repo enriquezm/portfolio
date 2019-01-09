@@ -40,7 +40,8 @@ class Status extends React.Component {
                 "Taking pics of my cat.",
                 "Getting a couple rounds of beer.",
                 "Designing a new UI.",
-                "Staring at some error logs."
+                "Staring at some error logs.",
+                "Playing my Switch."
             ]
         };
     }
