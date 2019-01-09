@@ -18,6 +18,11 @@ const PostContainer = styled.div`
     color: #7F00FF;
   }
 `
+const LinkContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
 
 const Template = ({data, pageContext}) => {
   
@@ -32,19 +37,19 @@ const Template = ({data, pageContext}) => {
         <h2>{title}</h2>
         <div dangerouslySetInnerHTML={{__html: html}} />
       </PostContainer>
-      <div>
+      <hr />
+      <LinkContainer>
       {prev && 
           <Link to={prev.frontmatter.path}>
             Previous Post
           </Link>
         }
-        {next && 
-          <Link to={next.frontmatter.path}>
-            Next Post
-          </Link>
-        }
-        
-      </div>
+      {next && 
+        <Link to={next.frontmatter.path}>
+          Next Post
+        </Link>
+      }
+      </LinkContainer>
     </Layout>
   )
 }
