@@ -11,7 +11,7 @@ const LayoutWrapper = styled.article`
   align-items: center;
 `
 const Container = styled.div`
-  width: 720px;
+  max-width: 720px;
   padding: 10px;
 `
 
