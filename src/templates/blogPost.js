@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
 import styled from 'styled-components';
 import '../global-styles.css';
@@ -19,7 +19,10 @@ const PostContainer = styled.div`
   }
 `
 
-const Template = ({data}) => {
+const Template = ({data, pageContext}) => {
+  
+  const {prev, next} = pageContext; 
+
   const {markdownRemark} = data;
   const title = markdownRemark.frontmatter.title;
   const html = markdownRemark.html;
@@ -29,6 +32,19 @@ const Template = ({data}) => {
         <h2>{title}</h2>
         <div dangerouslySetInnerHTML={{__html: html}} />
       </PostContainer>
+      <div>
+      {prev && 
+          <Link to={prev.frontmatter.path}>
+            Previous Post
+          </Link>
+        }
+        {next && 
+          <Link to={next.frontmatter.path}>
+            Next Post
+          </Link>
+        }
+        
+      </div>
     </Layout>
   )
 }

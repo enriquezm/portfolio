@@ -76,9 +76,9 @@ const IndexPage = () => {
        <H1>Myles Enriquez</H1>
        <P>I design/build interfaces and connect them to data.</P>
        <LinkContainer>
-        <Link className="primary" to="/blog/"><File size={20} /></Link> 
-        <a className="secondary" href="https://github.com/enriquezm"><Github size={20} /></a>
-        <a className="secondary" href="https://www.linkedin.com/in/mylesenriquez/"><LinkedIn size={20} /></a>
+        <Link className="primary" to="/blog/" title="Blog posts."><File size={20} /></Link> 
+        <a className="secondary" href="https://github.com/enriquezm" title="Github"><Github size={20} /></a>
+        <a className="secondary" href="https://www.linkedin.com/in/mylesenriquez/" title="LinkedIn"><LinkedIn size={20} /></a>
        </LinkContainer>
        <Status />
       </Anime>
