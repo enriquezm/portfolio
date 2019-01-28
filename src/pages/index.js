@@ -2,7 +2,8 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
+  const { edges } = data.allMarkdownRemark;
   return (
     <div>
       <header className="flex-container flex-split margin-bottom-lg">
@@ -12,7 +13,7 @@ const IndexPage = () => {
             <p className="font-color-violet">Frontend Engineer</p>
             <div>
               <a className="link-btn" href="#">resume</a>
-              <a className="link-btn" href="#">github</a>
+              <a className="link-btn" href="https://github.com/enriquezm">github</a>
             </div>
           </div>
         </div>
@@ -27,10 +28,20 @@ const IndexPage = () => {
         <div className="flex-content">
             <h2 className="margin-bottom-xs all-caps">Projects</h2>
             <p className="margin-bottom-sm font-color-light-gray-super">Some projects worth talking about. Check out my walkthrough, the source code, or the live/demo site.</p>
-          <ul className="margin-bottom-md">
-            <li className="margin-bottom-xs"><a className="margin-right-xs" href="#">habit rabbit</a><a className="link-btn margin-right-xs" href="#">source</a><a className="link-btn margin-right-xs" href="#">demo</a></li>
-            <li className="margin-bottom-xs"><a className="margin-right-xs" href="#">auralworth.com</a><a className="link-btn margin-right-xs" href="#">live site</a></li>
-            <li className="margin-bottom-xs"><a className="margin-right-xs" href="#">kellyintegrations.com</a><a className="link-btn margin-right-xs">live site</a></li>
+
+            <ul className="margin-bottom-md">
+            {
+              edges.map( edge => {
+                const { frontmatter } = edge.node;
+                return (
+                  <li key={frontmatter.path}  className="margin-bottom-xs">
+                    <Link 
+                    className="margin-right-xs" 
+                    to={frontmatter.path}>{frontmatter.title}</Link><a className="link-btn margin-right-xs" href="#">source</a><a className="link-btn margin-right-xs" href="#">demo</a>
+                  </li>
+                )
+              })
+            }
           </ul>
             <h2 className="margin-bottom-xs all-caps">Concepts</h2>
             <p className="margin-bottom-sm font-color-light-gray-super">Aren't quite full on projects, but shouldn't be thrown away...yet.</p>
