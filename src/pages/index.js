@@ -9,7 +9,7 @@ const IndexPage = ({ data }) => {
       <header className="flex-container flex-split margin-bottom-lg">
         <div>
           <div className="flex-content">
-            <a href="#"><h1>Myles Enriquez</h1></a>
+            <Link to="/"><h1>Myles Enriquez</h1></Link>
             <p className="font-color-violet">Frontend Engineer</p>
             <div>
               <a className="link-btn" href="#">resume</a>
@@ -37,7 +37,16 @@ const IndexPage = ({ data }) => {
                   <li key={frontmatter.path}  className="margin-bottom-xs">
                     <Link 
                     className="margin-right-xs" 
-                    to={frontmatter.path}>{frontmatter.title}</Link><a className="link-btn margin-right-xs" href="#">source</a><a className="link-btn margin-right-xs" href="#">demo</a>
+                    to={frontmatter.path}>
+                      {frontmatter.title}
+                    </Link>
+                    {
+                      frontmatter.source ? <a className="link-btn margin-right-xs" href={frontmatter.source}>source</a> : null
+                    }
+                    {
+                      frontmatter.demo ? <a className="link-btn margin-right-xs" href={frontmatter.demo}>demo</a> : null
+                    }
+                    
                   </li>
                 )
               })
@@ -78,6 +87,8 @@ export const query = graphql`
           frontmatter {
             title
             path
+            source
+            demo
             date
           }
         }
