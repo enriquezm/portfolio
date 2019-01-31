@@ -4,6 +4,8 @@ date: "2019-01-11"
 title: "No More Coding Please!"
 tags: ['health']
 excerpt: "Sometimes, I don't feel like coding. And that's okay."
+source: "https://google.com"
+demo: "https://google.com"
 ---
 
 There are weeks where I'm a coding god. I can just sling out algorithms left and right and build out some sick interfaces. I'm just driven and focused and super motivated. And then there are weeks where I just don't want to code at all. I don't want to write any code, deal with logic or anything of the sort.
