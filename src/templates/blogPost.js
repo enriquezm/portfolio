@@ -1,7 +1,16 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
-import Layout from '../components/Layout';
 import '../global-styles.css';
+import styled from 'styled-components';
+
+const PostContentContainer = styled.div`
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 10px;
+  }
+  p {
+    margin-bottom: 20px;
+  }
+`;
 
 
 const Template = ({data, pageContext}) => {
@@ -33,10 +42,10 @@ const Template = ({data, pageContext}) => {
 
       <main className="flex-container">
         <section className="flex-column">
-          <div className="flex-content">
+          <PostContentContainer className="flex-content">
             <h2>{title}</h2>
             <div dangerouslySetInnerHTML={{__html: html}} />
-          </div>
+          </PostContentContainer>
         </section>
       </main>
 
